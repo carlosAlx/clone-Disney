@@ -11,15 +11,16 @@ const Price = styled.p`
   color: #ffffff;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 0;
 `;
 
 const Text__plano = styled.p`
   color: #ffffff;
   font-size: 1rem;
-  font-weight: 100;
   text-align: center;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 `;
+
 const Container__planos = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +29,7 @@ const Container__planos = styled.div`
 `;
 
 const Card__plano = styled.div`
-  width: 23rem;
+  width: 24rem;
   margin: 0 auto;
   display: grid;
 `;
@@ -50,7 +51,6 @@ const Icon__planos = styled.img`
 const Button__plano = styled.a`
   background: #6421ff;
   color: #ffffff;
-  font-weight: normal;
   text-transform: uppercase;
   padding: 1rem;
   text-align: center;
