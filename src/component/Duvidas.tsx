@@ -5,22 +5,19 @@ type props = {
   title: string;
   info: string;
 };
-const Title = styled.h2`
-  text-align: center;
-`;
 
 const Accordion = styled.div`
   justify-content: space-between;
   align-items: center;
   display: flex;
   padding: 0.6rem 1rem;
+  margin-top: 1rem;
 `;
 
 export function Duvidas(props: props) {
   const [expanded, setExpanded] = useState(false);
   return (
     <section>
-      <Title></Title>
       <article className="question">
         <Accordion>
           <h3 onClick={() => setExpanded(!expanded)} className="question-title">

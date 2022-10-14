@@ -3,24 +3,34 @@
   background: #040714;
 }
 
+.container {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 7rem;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
-  will-change: filter;  
-  justify-content: space-evenly; 
+  will-change: filter;
+  justify-content: space-evenly;
 }
 
 .question {
-
+  row-gap: 1rem;
   background-color: #13151d;
 }
+
 .question h3 {
-  color: #f9f9f9;  
+  color: #f9f9f9;
   font-size: 1.2rem;
   font-family: inherit;
   font-weight: lighter;
   transition: 1s;
 }
+
 .question p {
   margin: 0;
   text-align: left;
@@ -28,6 +38,7 @@
   line-height: 1.2cm;
   padding: 0 2rem 1rem 2rem;
   transition: .5s;
+
 }
 
 .btn {
@@ -51,11 +62,36 @@
   cursor: pointer;
 }
 
-.text-center{
+.text-center {
   padding: 2rem;
   text-align: center;
 }
 
-section{
+section {
   margin-top: 3rem;
+}
+
+.menus {
+  display: flex;
+  justify-content: center;
+}
+
+.menus a {
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: #ffff;
+}
+
+.container__img {
+  display: grid;
+  padding: 1rem;
+}
+.set {
+  display: flex;
+}
+.link__assinatura a {
+  color: #ffff;
+  display: block;
+  text-decoration: underline;
 }

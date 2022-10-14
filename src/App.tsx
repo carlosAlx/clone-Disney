@@ -2,12 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import styled from "styled-components";
 import { Banner } from "./component/Banner";
-import { Breve } from "./component/Breve";
 import { Planos } from "./component/Planos";
 import { Dispositivos } from "./component/Dispositivos";
 import { Footer } from "./component/Footer";
 import { Questions } from "./component/Questions";
 import { Duvidas } from "./component/Duvidas";
+import { AnyCard } from "./component/ContaienerCard";
 
 const Section__blog = styled.section`
   display: flex;
@@ -52,21 +52,14 @@ const Back__image = styled.div`
 `;
 
 function App() {
-  const Container = styled.div`
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 0 7rem;
-    @media (max-width: 1024px) {
-    }
-  `;
   const [count, setCount] = useState(0);
+  const [nome, setNome] = useState("sem nome");
 
   return (
     <>
       <Banner />
-      <Container>
-        <Breve />
+      <div className="container">
+        <AnyCard />
         <Planos />
         <Section__blog>
           <Container__img>
@@ -101,7 +94,7 @@ function App() {
           ))}
         </section>
         <Footer />
-      </Container>
+      </div>
     </>
   );
 }
