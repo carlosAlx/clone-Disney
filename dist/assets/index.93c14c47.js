@@ -95,7 +95,7 @@ Error generating stack: `+i.message+`
 `,Wh=Q.h2`
   font-size: 1.55rem;
   color: #ffffff;
-`;function Qh(){return w("section",{children:w(Vh,{children:K(Hh,{children:[w(Bh,{src:"./src/assets/img/disney_logo.svg",alt:""}),w(Wh,{children:"As melhores hist\xF3rias em um s\xF3 lugar."}),K("div",{className:"set",children:[K("div",{className:"container__img",children:[w(ja,{src:"./src/assets/img/combo.png",alt:""}),w(Ma,{href:"",children:"Assine Agora"})]}),K("div",{className:"container__img",children:[w(ja,{src:"./src/assets/img/starplay.png",alt:""}),w(Ma,{href:"",children:"Assine Agora"})]})]}),K("div",{className:"link__assinatura",children:[w("a",{href:"",children:"Assinar somente o Disney+ mensal"}),w("a",{href:"",children:"Assinar somente o Disney+ anual"})]})]})})})}const Yh=Q.h2`
+`;function Qh(){return w("section",{children:w(Vh,{children:K(Hh,{children:[w(Bh,{src:"src/assets/img/disney_logo.svg",alt:""}),w(Wh,{children:"As melhores hist\xF3rias em um s\xF3 lugar."}),K("div",{className:"set",children:[K("div",{className:"container__img",children:[w(ja,{src:"../src/assets/img/combo.png",alt:""}),w(Ma,{href:"",children:"Assine Agora"})]}),K("div",{className:"container__img",children:[w(ja,{src:"/src/assets/img/starplay.png",alt:""}),w(Ma,{href:"",children:"Assine Agora"})]})]}),K("div",{className:"link__assinatura",children:[w("a",{href:"",children:"Assinar somente o Disney+ mensal"}),w("a",{href:"",children:"Assinar somente o Disney+ anual"})]})]})})})}const Yh=Q.h2`
   color: #ffffff;
   font-size: 2.5rem;
   text-align: center;

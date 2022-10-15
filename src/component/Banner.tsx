@@ -53,15 +53,15 @@ export function Banner() {
     <section>
       <Banner__container>
         <Banner__text>
-          <Img src="./src/assets/img/disney_logo.svg" alt="" />
+          <Img src="src/assets/img/disney_logo.svg" alt="" />
           <Title__banner>As melhores histórias em um só lugar.</Title__banner>
           <div className="set">
             <div className="container__img">
-              <Img__icon src="./src/assets/img/combo.png" alt="" />
+              <Img__icon src="../src/assets/img/combo.png" alt="" />
               <Button href="">Assine Agora</Button>
             </div>
             <div className="container__img">
-              <Img__icon src="./src/assets/img/starplay.png" alt="" />
+              <Img__icon src="/src/assets/img/starplay.png" alt="" />
               <Button href="">Assine Agora</Button>
             </div>
           </div>
