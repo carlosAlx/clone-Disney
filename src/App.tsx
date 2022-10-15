@@ -45,7 +45,7 @@ const Back__image = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url("/img/rei.png");
+  background-image: url("./img/rei.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -63,7 +63,7 @@ function App() {
         <Planos />
         <Section__blog>
           <Container__img>
-            <Img src="/img/mand.png" alt="" />
+            <Img src="./img/mand.png" alt="" />
           </Container__img>
           <Container__text>
             <Title>Assista do seu jeito</Title>
