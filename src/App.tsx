@@ -7,7 +7,7 @@ import { Dispositivos } from "./component/Dispositivos";
 import { Footer } from "./component/Footer";
 import { Questions } from "./component/Questions";
 import { Duvidas } from "./component/Duvidas";
-import { AnyCard } from "./component/ContaienerCard";
+import { AnyCard } from "./component/ContainerCard";
 
 const Section__blog = styled.section`
   display: flex;
@@ -45,7 +45,7 @@ const Back__image = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url("src/assets/img/rei.png");
+  background-image: url("../src/assets/img/rei.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -63,7 +63,7 @@ function App() {
         <Planos />
         <Section__blog>
           <Container__img>
-            <Img src="src/assets/img/mand.png" alt="" />
+            <Img src="../src/assets/img/mand.png" alt="" />
           </Container__img>
           <Container__text>
             <Title>Assista do seu jeito</Title>

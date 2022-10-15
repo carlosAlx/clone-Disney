@@ -27,7 +27,7 @@ export function Cardp(prop: img) {
   return (
     <Container__breve>
       {prop.imgName.map((imgName, id) => (
-        <Card__img key={id} src={"src/assets/img/" + imgName + ".jpg"} alt="" />
+        <Card__img key={id} src={"../src/assets/img/" + imgName + ".jpg"} alt="" />
       ))}
     </Container__breve>
   );
