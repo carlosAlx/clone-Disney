@@ -2,7 +2,7 @@
   "name": "clone-disney",
   "private": true,
   "version": "0.0.0",
-  "homepage": "./",
+  "homepage": "https://carlosalx.github.io/clone-Disney/",
   "type": "module",
   "scripts": {
     "dev": "vite",
