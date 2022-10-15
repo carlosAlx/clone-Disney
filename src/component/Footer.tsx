@@ -4,7 +4,7 @@ export function Footer() {
     return(
         <footer>
             <div>
-                <img  className="logo" src="./src/assets/img/logo.png" alt="" />
+                <img  className="logo" src="/img/logo.png" alt="" />
                 <ul className="nav">
                     <li>Português</li>
                     <li>Termos e Condições de Uso</li>

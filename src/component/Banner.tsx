@@ -32,7 +32,7 @@ const Banner__container = styled.div`
   position: relative;
   width: 100%;
   height: 56rem;
-  background-image: url("./src/assets/img/original.jpg");
+  background-image: url("/img/original.jpg");
   background-size: cover;
   align-items: center;
   display: flex;
@@ -57,11 +57,11 @@ export function Banner() {
           <Title__banner>As melhores histórias em um só lugar.</Title__banner>
           <div className="set">
             <div className="container__img">
-              <Img__icon src="../src/assets/img/combo.png" alt="" />
+              <Img__icon src="./img/combo.png" alt="" />
               <Button href="">Assine Agora</Button>
             </div>
             <div className="container__img">
-              <Img__icon src="/src/assets/img/starplay.png" alt="" />
+              <Img__icon src="/img/starplay.png" alt="" />
               <Button href="">Assine Agora</Button>
             </div>
           </div>
