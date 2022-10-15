@@ -38,7 +38,7 @@ export function Dispositivos() {
       <Container>
         <List className="lista">
           <li>
-            <Icon src="../src/assets/img/pc.png" alt="" />
+            <Icon src="./src/assets/img/pc.png" alt="" />
           </li>
           <li>
             <Dispositivo>Computador</Dispositivo>
@@ -49,7 +49,7 @@ export function Dispositivos() {
         </List>
         <List>
           <li>
-            <Icon src="../src/assets/img/tv.png" alt="" />
+            <Icon src="./src/assets/img/tv.png" alt="" />
           </li>
           <li>
             <Dispositivo>TV</Dispositivo>
@@ -64,7 +64,7 @@ export function Dispositivos() {
         </List>
         <List>
           <li>
-            <Icon src="../src/assets/img/game.png" alt="" />
+            <Icon src="./src/assets/img/game.png" alt="" />
           </li>
           <li>
             <Dispositivo>Videogames</Dispositivo>
@@ -77,7 +77,7 @@ export function Dispositivos() {
         </List>
         <List>
           <li>
-            <Icon src="../src/assets/img/tablet.png" alt="" />
+            <Icon src="./src/assets/img/tablet.png" alt="" />
           </li>
           <li>
             <Dispositivo>Celulares e tablets</Dispositivo>

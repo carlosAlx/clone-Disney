@@ -1,13 +1,7 @@
 import styled from "styled-components";
 import { Cardp } from "./Card";
-import {
-  cloneElement,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import { render } from "react-dom";
+import { useEffect, useState } from "react";
+
 let listImg = [
   "desencatada",
   "willow",

@@ -45,7 +45,7 @@ const Back__image = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url("../src/assets/img/rei.png");
+  background-image: url("./src/assets/img/rei.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
