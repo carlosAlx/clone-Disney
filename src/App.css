@@ -81,6 +81,7 @@ section {
   padding: 1rem;
   text-transform: uppercase;
   color: #ffff;
+  cursor: pointer;
 }
 
 .container__img {
