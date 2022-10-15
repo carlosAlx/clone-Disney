@@ -63,7 +63,7 @@ function App() {
         <Planos />
         <Section__blog>
           <Container__img>
-            <Img src="../src/assets/img/mand.png" alt="" />
+            <Img src="./src/assets/img/mand.png" alt="" />
           </Container__img>
           <Container__text>
             <Title>Assista do seu jeito</Title>
