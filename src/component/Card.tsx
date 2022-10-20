@@ -12,7 +12,7 @@ const Card__img = styled.img`
     width: 100%;
   }
 `;
-const Container__breve = styled.div`
+const Container__card = styled.div`
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -21,12 +21,12 @@ const Container__breve = styled.div`
 type img = {
   imgName: string[];
 };
-export function Cardp(prop: img) {
+export function Card(prop: img) {
   return (
-    <Container__breve>
+    <Container__card>
       {prop.imgName.map((imgName, id) => (
         <Card__img key={id} src={"./img/" + imgName + ".jpg"} alt="" />
       ))}
-    </Container__breve>
+    </Container__card>
   );
 }

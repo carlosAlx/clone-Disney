@@ -1,6 +1,6 @@
 #root {
   margin: 0;
-  background: #040714;
+  
 }
 
 .container {
@@ -76,14 +76,6 @@ section {
   justify-content: center;
 }
 
-.menus a {
-  font-size: 1.3rem;
-  padding: 1rem;
-  text-transform: uppercase;
-  color: #ffff;
-  cursor: pointer;
-}
-
 .container__img {
   display: grid;
   padding: 1rem;
@@ -95,4 +87,11 @@ section {
   color: #ffff;
   display: block;
   text-decoration: underline;
+}
+
+.active{
+  text-decoration: underline;
+}
+.no-active{
+  text-decoration: none;
 }

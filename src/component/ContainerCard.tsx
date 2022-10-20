@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Cardp } from "./Card";
-import { useEffect, useState } from "react";
+import styled, { css } from "styled-components";
+import { Card } from "./Card";
+import { Component, useEffect, useRef, useState } from "react";
 
 let listImg = [
   "desencatada",
@@ -11,21 +11,36 @@ let listImg = [
   "semlimites",
 ];
 
+type PropUnder = {
+  aUnderline: boolean;
+};
+
+let listUnder = [true, false, false];
+const menuName = [
+  { id: 0, name: "em breve", under: true },
+  { id: 1, name: "mais populares", under: false },
+  { id: 2, name: "Louise Nevelson", under: false },
+];
+
+const Button__underlined = styled.a`
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: #ffff;
+  cursor: pointer;
+  text-decoration: ${(props: PropUnder) =>
+    props.aUnderline ? "underline" : "none"};
+`;
+
 export function AnyCard() {
   const [img, setImg] = useState(listImg);
-  const [text, setText] = useState("breve");
+  const [underlined, setUnderlined] = useState(true);
+  const [menuClick, setMenuclick] = useState();
+  const [toogle, setToogle] = useState("");
 
-  useEffect(() => {
-    img;
-  }, [img]);
-
-  console.log(img);
-
-  function mais() {}
-  return (
-    <section>
-      <div className="menus">
-        <a
+  useEffect(() => {}, []);
+  /*        <Button__underlined
+          aUnderline={false}
           onClick={() => {
             setImg([
               "desencatada",
@@ -38,23 +53,57 @@ export function AnyCard() {
           }}
         >
           em breve
-        </a>
-        <a
+        </Button__underlined>
+        <Button__underlined
+          aUnderline={true}
           onClick={() => {
             setImg(["red", "cavaleiro", "obiwan", "bluey", "sqn", "dr"]);
           }}
         >
           mais populares
-        </a>
-        <a
-          onClick={() => {
+        </Button__underlined> */
+  const alterUnder = () => {};
+
+  return (
+    <section>
+      <div className="menus">
+        <Button__underlined
+          id="breve"
+          aUnderline={underlined}
+          onClick={(e) => {
             setImg(["libertadores", "simp", "league", "karda", "bel", "nba"]);
+            setUnderlined((state) => !state);
           }}
         >
-          mais no star+
-        </a>
+          em breve
+        </Button__underlined>
+        <Button__underlined
+          aUnderline={underlined}
+          onClick={() => {
+            setImg([
+              "desencatada",
+              "willow",
+              "lobisomem",
+              "spidey",
+              "santa",
+              "semlimites",
+            ]);
+            setUnderlined((state) => !state);
+          }}
+        >
+          em breve
+        </Button__underlined>
+        <Button__underlined
+          aUnderline={underlined}
+          onClick={(underlined) => {
+            setImg(["red", "cavaleiro", "obiwan", "bluey", "sqn", "dr"]);
+            setUnderlined((state) => !state);
+          }}
+        >
+          mais populares
+        </Button__underlined>
       </div>
-      <Cardp imgName={img} />
+      <Card imgName={img} />
     </section>
   );
 }

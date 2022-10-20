@@ -8,6 +8,7 @@ import { Footer } from "./component/Footer";
 import { Questions } from "./component/Questions";
 import { Duvidas } from "./component/Duvidas";
 import { AnyCard } from "./component/ContainerCard";
+import { GlobalStyle } from "./styles/global";
 
 const Section__blog = styled.section`
   display: flex;
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <>
+      <GlobalStyle />
       <Banner />
       <div className="container">
         <AnyCard />
