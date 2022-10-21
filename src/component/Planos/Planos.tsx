@@ -1,73 +1,18 @@
-import styled from "styled-components";
-
-const Title__plano = styled.h2`
-  color: #ffffff;
-  font-size: 2.5rem;
-  text-align: center;
-`;
-
-const Price = styled.p`
-  font-size: 1.7rem;
-  color: #ffffff;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 0;
-`;
-
-const Text__plano = styled.p`
-  color: #ffffff;
-  font-size: 1rem;
-  text-align: center;
-  padding: 0 2.5rem;
-`;
-
-const Container__planos = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex: auto;
-  justify-content: center;
-`;
-
-const Card__plano = styled.div`
-  width: 24rem;
-  margin: 0 auto;
-  display: grid;
-`;
-
-const Back__plano = styled.div`
-  background-image: url("./img/card_plano.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-`;
-
-const Section = styled.section``;
-const Icon__planos = styled.img`
-  padding-top: 3rem;
-  max-width: 100%;
-  margin: 0 auto;
-  display: grid;
-`;
-
-const Button__plano = styled.a`
-  background: #6421ff;
-  color: #ffffff;
-  text-transform: uppercase;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin: 0.2rem 3rem;
-`;
-const Text__min = styled.p`
-  font-size: 0.8rem;
-  text-align: center;
-`;
+import {
+  Title__plano,
+  Card__plano,
+  Container__planos,
+  Button__plano,
+  Price,
+  Text__plano,
+  Text__min,
+  Icon__planos,
+  Back__plano,
+} from "./style";
 
 export function Planos() {
   return (
-    <Section>
+    <>
       <Title__plano>Escolha seu plano</Title__plano>
       <Container__planos>
         <Card__plano>
@@ -104,6 +49,6 @@ export function Planos() {
         *O preço pode variar caso a assinatura seja feita através de outras
         plataformas.
       </Text__min>
-    </Section>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { Card } from "./Card";
-import { Component, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 let listImg = [
   "desencatada",
@@ -39,33 +39,11 @@ export function AnyCard() {
   const [toogle, setToogle] = useState("");
 
   useEffect(() => {}, []);
-  /*        <Button__underlined
-          aUnderline={false}
-          onClick={() => {
-            setImg([
-              "desencatada",
-              "willow",
-              "lobisomem",
-              "spidey",
-              "santa",
-              "semlimites",
-            ]);
-          }}
-        >
-          em breve
-        </Button__underlined>
-        <Button__underlined
-          aUnderline={true}
-          onClick={() => {
-            setImg(["red", "cavaleiro", "obiwan", "bluey", "sqn", "dr"]);
-          }}
-        >
-          mais populares
-        </Button__underlined> */
+
   const alterUnder = () => {};
 
   return (
-    <section>
+    <>
       <div className="menus">
         <Button__underlined
           id="breve"
@@ -104,6 +82,6 @@ export function AnyCard() {
         </Button__underlined>
       </div>
       <Card imgName={img} />
-    </section>
+    </>
   );
 }

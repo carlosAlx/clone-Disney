@@ -1,40 +1,13 @@
 import styled from "styled-components";
-
-const Title = styled.h2`
-  text-align: center;
-  font-size: 2.3rem;
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: space-around; 
-  gap: 1rem; 
-`;
-
-const List = styled.ul`
-  text-align: center;
-  list-style: none;
-  padding-left: 0;
-`;
-
-const Icon = styled.img`
-  max-width: 100%;
-  width: 25rem;
-`;
-
-const Dispositivo = styled.h3`
-  font-size: 1.5rem;
-`;
-const Section = styled.section`
-  margin: 0;
-`;
+import { Title } from "../../styles/global";
+import { Container, Icon, Dispositivo, List } from "./style";
 
 export function Dispositivos() {
   return (
-    <section>
-      <Title>Disponível nos seus dispositivos favoritos</Title>
+    <>
+      <Title className="text-center">
+        Disponível nos seus dispositivos favoritos
+      </Title>
       <Container>
         <List className="lista">
           <li>
@@ -87,6 +60,6 @@ export function Dispositivos() {
           <li>iPhone e iPad</li>
         </List>
       </Container>
-    </section>
+    </>
   );
 }

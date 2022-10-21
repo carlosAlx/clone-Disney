@@ -1,34 +1,28 @@
 html {
-  font-family: 'Avenir', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  font-family: Avenir, sans-serif;
 
 }
 
 @font-face {
   font-family: Avenir;
   src: url(https://static-assets.bamgrid.com/fonts/avenir-world/AvenirWorld-Demi.46e9d5864ff91e13275000330f3c2b74.woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap
 }
 
-
-a {
-  color: #646cff;
-  text-decoration: inherit;
-
+@font-face {
+  font-family: Avenir;
+  src: url(https://static-assets.bamgrid.com/fonts/avenir-world/AvenirWorld.ca722da1c78901cdb9b2d63c4b3525b8.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional
 }
 
-section {
-  margin: 0;
-}
 
 .nav {
   display: flex;
   list-style: none;
-
   text-align: center;
   justify-content: center;
   letter-spacing: .07rem;
@@ -37,9 +31,4 @@ section {
 .nav li {
   padding: .5rem;
 
-}
-
-footer {
-  text-align: center;
-  font-size: .7rem;
 }

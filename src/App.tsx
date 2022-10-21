@@ -1,30 +1,21 @@
 import { useState } from "react";
 import "./App.css";
 import styled from "styled-components";
-import { Banner } from "./component/Banner";
-import { Planos } from "./component/Planos";
-import { Dispositivos } from "./component/Dispositivos";
-import { Footer } from "./component/Footer";
-import { Questions } from "./component/Questions";
-import { Duvidas } from "./component/Duvidas";
-import { AnyCard } from "./component/ContainerCard";
-import { GlobalStyle } from "./styles/global";
+import { Banner } from "./component/Banner/Banner";
+import { Planos } from "./component/Planos/Planos";
+import { Dispositivos } from "./component/Dispositivos/Dispositivos";
+import { Footer } from "./component/Footer/Footer";
+import { Questions } from "./component/Duvidas/Questions";
+import { AnyCard } from "./component/Card/ContainerCard";
+import { GlobalStyle, Img, Text, Title, Container } from "./styles/global";
+import { Duvidas } from "./component/Duvidas/Duvidas";
 
-const Section__blog = styled.section`
+const Section__blog = styled.div`
   display: flex;
   margin: auto;
   align-items: center;
 `;
-const Title = styled.h2`
-  font-size: 2rem;
-`;
-const Text = styled.p`
-  font-size: 1rem;
-`;
-const Img = styled.img`
-  max-widh: 100%;
-  width: 100%;
-`;
+
 const Container__img = styled.div`
   width: 50%;
   color: #ffffff;
@@ -59,44 +50,69 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Banner />
-      <div className="container">
-        <AnyCard />
-        <Planos />
-        <Section__blog>
-          <Container__img>
-            <Img src="./img/mand.png" alt="" />
-          </Container__img>
-          <Container__text>
-            <Title>Assista do seu jeito</Title>
-            <Text>
-              Aproveite a tela grande da TV ou assista no tablet, laptop,
-              celular e outros aparelhos. Nossa seleção de títulos em 4K não
-              para de crescer. Além disso, para a felicidade de todos, é
-              possível assistir em até 4 telas ao mesmo tempo.
-            </Text>
-          </Container__text>
-        </Section__blog>
-        <Section__blog id="baixar">
-          <Back__image>
-            <Container__text className="Back__image">
-              <Title>Baixe filmes e séries</Title>
-              <Text>
-                Baixe e assista quando e onde quiser. Assim, seus favoritos
-                estão sempre com você, até mesmo sem internet.
-              </Text>
+      <main>
+        <Banner />
+      </main>
+      <section id="card">
+        <Container>
+          <AnyCard />
+        </Container>
+      </section>
+      <section id="planos">
+        <Container>
+          <Planos />
+        </Container>
+      </section>
+      <section id="blog">
+        <Container>
+          <Section__blog>
+            <Container__img>
+              <Img src="./img/mand.png" alt="" />
+            </Container__img>
+            <Container__text>
+              <article>
+                <Title>Assista do seu jeito</Title>
+                <Text>
+                  Aproveite a tela grande da TV ou assista no tablet, laptop,
+                  celular e outros aparelhos. Nossa seleção de títulos em 4K não
+                  para de crescer. Além disso, para a felicidade de todos, é
+                  possível assistir em até 4 telas ao mesmo tempo.
+                </Text>
+              </article>
             </Container__text>
-          </Back__image>
-        </Section__blog>
+          </Section__blog>
+        </Container>
+      </section>
+      <section id="baixar">
+        <Container>
+          <Section__blog>
+            <Back__image>
+              <Container__text className="Back__image">
+                <article>
+                  <Title>Baixe filmes e séries</Title>
+                  <Text>
+                    Baixe e assista quando e onde quiser. Assim, seus favoritos
+                    estão sempre com você, até mesmo sem internet.
+                  </Text>
+                </article>
+              </Container__text>
+            </Back__image>
+          </Section__blog>
+        </Container>
+      </section>
+      <section id="dispositivos">
         <Dispositivos />
-        <section className="info">
+      </section>
+
+      <section className="info">
+        <Container>
           <Title className="text-center">Perguntas Frequentes</Title>
           {Questions.map((Question) => (
             <Duvidas key={Question.id} {...Question} />
           ))}
-        </section>
-        <Footer />
-      </div>
+        </Container>
+      </section>
+      <Footer />
     </>
   );
 }
