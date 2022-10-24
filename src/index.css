@@ -18,17 +18,3 @@ html {
   font-style: normal;
   font-display: optional
 }
-
-
-.nav {
-  display: flex;
-  list-style: none;
-  text-align: center;
-  justify-content: center;
-  letter-spacing: .07rem;
-}
-
-.nav li {
-  padding: .5rem;
-
-}

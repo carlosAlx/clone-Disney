@@ -40,6 +40,9 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
     font-size: .7rem;
   }
+  a {
+    text-decoration: inherit;
+  }
   &.text-center { 
     text-align: center;
   }

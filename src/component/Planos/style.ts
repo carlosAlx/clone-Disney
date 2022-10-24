@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Button, Text } from "../../styles/global";
 
-
 export const Title__plano = styled.h2`
   font-size: 2.5rem;
   text-align: center;
@@ -55,6 +54,7 @@ export const Button__plano = styled(Button)`
   margin: 0.2rem 3rem;
 `;
 export const Text__min = styled.p`
+  padding-top: 5rem;
   font-size: 0.8rem;
   text-align: center;
 `;
