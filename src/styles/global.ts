@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   section {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
   footer {
     text-align: center;
@@ -81,4 +81,8 @@ export const Container = styled.div`
   overflow: hidden;
   position: relative;
   padding: 0 7rem;
+
+  @media (max-width: 1080px) {
+    padding: 0;
+  }
 `;

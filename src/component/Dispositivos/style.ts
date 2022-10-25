@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;  
   margin: 0 auto;
   justify-content: space-around;
-  gap: 1rem;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const List = styled.ul`

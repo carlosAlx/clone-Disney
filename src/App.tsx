@@ -41,6 +41,10 @@ const Back__image = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (max-width: 1024px) {
+    height: 30rem;
+  }
 `;
 
 function App() {
@@ -101,7 +105,9 @@ function App() {
         </Container>
       </section>
       <section id="dispositivos">
-        <Dispositivos />
+        <Container>
+          <Dispositivos />
+        </Container>
       </section>
 
       <section className="info">

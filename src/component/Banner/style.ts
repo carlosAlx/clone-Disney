@@ -25,8 +25,15 @@ export const Banner__container = styled.div`
   height: 56rem;
   background-image: url("./img/original.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   align-items: center;
   display: flex;
+
+  @media (max-width: 1024px) {    
+    height: 35rem;
+  }
+
 `;
 export const Banner__text = styled.div`
   padding: 7rem;
