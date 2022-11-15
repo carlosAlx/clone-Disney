@@ -18,3 +18,16 @@ export const Container__card = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
+
+type PropUnderline = {
+  aUnderline?: boolean;
+};
+
+export const Button__underlined = styled.a<PropUnderline>`
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: #ffff;
+  cursor: pointer;
+  text-decoration: ${(props) => props.aUnderline ? "underline" : "none"};
+`;

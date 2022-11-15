@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { Card } from "./Card";
 import { useEffect, useState } from "react";
+import { Button__underlined } from "./style";
 
 let listImg = [
   "desencatada",
@@ -10,33 +11,38 @@ let listImg = [
   "santa",
   "semlimites",
 ];
-
-type PropUnder = {
-  aUnderline: boolean;
-};
-
-let listUnder = [true, false, false];
-const menuName = [
-  { id: 0, name: "em breve", under: true },
-  { id: 1, name: "mais populares", under: false },
-  { id: 2, name: "Louise Nevelson", under: false },
+type CardPageImgsProp = [
+  { id: BigInteger; name: string; under: boolean; imgs: [] }
 ];
-
-const Button__underlined = styled.a`
-  font-size: 1.2rem;
-  padding: 1rem;
-  text-transform: uppercase;
-  color: #ffff;
-  cursor: pointer;
-  text-decoration: ${(props: PropUnder) =>
-    props.aUnderline ? "underline" : "none"};
-`;
+const CardPageImgs = [
+  {
+    id: 0,
+    name: "em breve",
+    imgs: [
+      "desencatada",
+      "willow",
+      "lobisomem",
+      "spidey",
+      "santa",
+      "semlimites",
+    ],
+  },
+  {
+    id: 1,
+    name: "mais populares",
+    imgs: ["red", "cavaleiro", "obiwan", "bluey", "sqn", "dr"],
+  },
+  {
+    id: 2,
+    name: "MAIS NO STAR+",
+    imgs: ["libertadores", "simp", "league", "karda", "bel", "nba"],
+  },
+];
 
 export function AnyCard() {
   const [img, setImg] = useState(listImg);
-  const [underlined, setUnderlined] = useState(true);
-  const [menuClick, setMenuclick] = useState();
-  const [toogle, setToogle] = useState("");
+  const [underlined, setUnderlined] = useState(0);
+  const [PageCard, setPageCard] = useState(CardPageImgs);
 
   useEffect(() => {}, []);
 
@@ -45,41 +51,17 @@ export function AnyCard() {
   return (
     <>
       <div className="menus">
-        <Button__underlined
-          id="breve"
-          aUnderline={underlined}
-          onClick={(e) => {
-            setImg(["libertadores", "simp", "league", "karda", "bel", "nba"]);
-            setUnderlined((state) => !state);
-          }}
-        >
-          em breve
-        </Button__underlined>
-        <Button__underlined
-          aUnderline={underlined}
-          onClick={() => {
-            setImg([
-              "desencatada",
-              "willow",
-              "lobisomem",
-              "spidey",
-              "santa",
-              "semlimites",
-            ]);
-            setUnderlined((state) => !state);
-          }}
-        >
-          em breve
-        </Button__underlined>
-        <Button__underlined
-          aUnderline={underlined}
-          onClick={(underlined) => {
-            setImg(["red", "cavaleiro", "obiwan", "bluey", "sqn", "dr"]);
-            setUnderlined((state) => !state);
-          }}
-        >
-          mais populares
-        </Button__underlined>
+        {PageCard.map((item, id) => (
+          <Button__underlined
+            aUnderline={underlined === item.id}
+            onClick={() => {
+              setUnderlined(item.id);
+              setImg(item.imgs);
+            }}
+          >
+            {item.name}
+          </Button__underlined>
+        ))}
       </div>
       <Card imgName={img} />
     </>
