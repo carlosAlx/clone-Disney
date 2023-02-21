@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Button, Text } from "../../styles/global";
-
+import { Button, Text } from "@/styles/global";
+import Card_plano from "@/assets/img/card_plano.png";
 export const Title__plano = styled.h2`
   font-size: 2.5rem;
   text-align: center;
@@ -33,7 +33,7 @@ export const Card__plano = styled.div`
 `;
 
 export const Back__plano = styled.div`
-  background-image: url("./img/card_plano.png");
+  background-image: url(${Card_plano});
   background-size: contain;
   background-repeat: no-repeat;
 `;

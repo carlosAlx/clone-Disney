@@ -1,11 +1,12 @@
 import { List__menu, Menu } from "./styles";
+import Logo from "@/assets/img/logo.png";
 
 
 export function Footer() {
     return(
         <footer>
             <div>
-                <img  className="logo" src="./img/logo.png" alt="" />
+                <img  className="logo" src={Logo} alt="" />
                 <List__menu>
                     <Menu>Português</Menu>
                     <Menu>Termos e Condições de Uso</Menu>

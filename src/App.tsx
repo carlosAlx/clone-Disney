@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import styled from "styled-components";
 import { Banner } from "./component/Banner/Banner";
@@ -9,6 +8,8 @@ import { Questions } from "./component/Duvidas/Questions";
 import { AnyCard } from "./component/Card/ContainerCard";
 import { GlobalStyle, Img, Text, Title, Container } from "./styles/global";
 import { Duvidas } from "./component/Duvidas/Duvidas";
+import Mandalorian from "@/assets/img/Mand.png";
+import Rei_leao from "@/assets/img/rei.png";
 
 const Section__blog = styled.div`
   display: flex;
@@ -17,14 +18,14 @@ const Section__blog = styled.div`
 `;
 
 const Container__img = styled.div`
-  width: 50%;
+  flex-basis: 50%;
   color: #ffffff;
   @media (max-width: 1024px) {
     width: 100%;
   }
 `;
 const Container__text = styled.div`
-  width: 45%;
+  flex-basis: 45%;
   color: #ffffff;
   padding: 2rem;
   @media (max-width: 1024px) {
@@ -37,7 +38,7 @@ const Back__image = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url("./img/rei.png");
+  background-image: url(${Rei_leao});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -48,9 +49,6 @@ const Back__image = styled.div`
 `;
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [nome, setNome] = useState("sem nome");
-
   return (
     <>
       <GlobalStyle />
@@ -71,7 +69,7 @@ function App() {
         <Container>
           <Section__blog>
             <Container__img>
-              <Img src="./img/mand.png" alt="" />
+              <Img src={Mandalorian} alt="mandalorian" />
             </Container__img>
             <Container__text>
               <article>

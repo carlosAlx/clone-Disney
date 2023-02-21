@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   footer {
     text-align: center;
     font-size: .7rem;
+    width: 100%;
   }
   a {
     text-decoration: inherit;
@@ -74,6 +75,8 @@ export const Button = styled.a`
   border-radius: 0.2rem;
   padding: 1rem 3rem;
   text-decoration: inherit;
+  text-align: center;
+  display: flex;
 `;
 
 export const Container = styled.div`
@@ -84,5 +87,6 @@ export const Container = styled.div`
 
   @media (max-width: 1080px) {
     padding: 0;
+    margin: 0;
   }
 `;

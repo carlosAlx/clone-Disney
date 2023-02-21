@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
 import { Card } from "./Card";
 import { useEffect, useState } from "react";
 import { Button__underlined } from "./style";
+import { CardPageImgsType, Img } from "./Type";
 
-let listImg = [
+const ListImg = [
   "desencatada",
   "willow",
   "lobisomem",
@@ -11,10 +11,8 @@ let listImg = [
   "santa",
   "semlimites",
 ];
-type CardPageImgsProp = [
-  { id: BigInteger; name: string; under: boolean; imgs: [] }
-];
-const CardPageImgs = [
+
+const CardPageImgs: Array<CardPageImgsType> = [
   {
     id: 0,
     name: "em breve",
@@ -40,18 +38,20 @@ const CardPageImgs = [
 ];
 
 export function AnyCard() {
-  const [img, setImg] = useState(listImg);
+  const [img, setImg] = useState([""]);
   const [underlined, setUnderlined] = useState(0);
-  const [PageCard, setPageCard] = useState(CardPageImgs);
 
-  useEffect(() => {}, []);
-
-  const alterUnder = () => {};
+  useEffect(() => {
+    if (underlined === 0) {
+      CardPageImgs.map((item, id) => (
+        setUnderlined(id), setImg(item.imgs)));
+    }
+  }, []);
 
   return (
     <>
       <div className="menus">
-        {PageCard.map((item, id) => (
+        {CardPageImgs.map((item, id) => (
           <Button__underlined
             aUnderline={underlined === item.id}
             onClick={() => {
@@ -63,7 +63,7 @@ export function AnyCard() {
           </Button__underlined>
         ))}
       </div>
-      <Card imgName={img} />
+      <Card imgsName={img} />
     </>
   );
 }

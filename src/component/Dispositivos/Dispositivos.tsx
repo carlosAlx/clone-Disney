@@ -1,6 +1,11 @@
 import styled from "styled-components";
-import { Title } from "../../styles/global";
+import { Title } from "@/styles/global";
 import { Container, Icon, Dispositivo, List } from "./style";
+import Tv from "@/assets/img/tv.png";
+import Game from "@/assets//img/game.png";
+import Tablet from "@/assets/img/tablet.png";
+import Pc from "@/assets/img/pc.png";
+
 
 export function Dispositivos() {
   return (
@@ -11,7 +16,7 @@ export function Dispositivos() {
       <Container>
         <List className="lista">
           <li>
-            <Icon src="./img/pc.png" alt="" />
+            <Icon src={Pc} alt="pc" />
           </li>
           <li>
             <Dispositivo>Computador</Dispositivo>
@@ -22,7 +27,7 @@ export function Dispositivos() {
         </List>
         <List>
           <li>
-            <Icon src="./img/tv.png" alt="" />
+            <Icon src={Tv} alt="Tv" />
           </li>
           <li>
             <Dispositivo>TV</Dispositivo>
@@ -37,7 +42,7 @@ export function Dispositivos() {
         </List>
         <List>
           <li>
-            <Icon src="./img/game.png" alt="" />
+            <Icon src={Game} alt="" />
           </li>
           <li>
             <Dispositivo>Videogames</Dispositivo>
@@ -50,7 +55,7 @@ export function Dispositivos() {
         </List>
         <List>
           <li>
-            <Icon src="./img/tablet.png" alt="" />
+            <Icon src={Tablet} alt="tablet" />
           </li>
           <li>
             <Dispositivo>Celulares e tablets</Dispositivo>

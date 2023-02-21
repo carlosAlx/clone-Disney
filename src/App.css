@@ -9,12 +9,22 @@
 }
 
 .container__img {
-  display: grid;
-  padding: 1rem;
+  width: 100%;
+  display: block;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .container__img {}
 }
 
 .set {
   display: flex;
+  gap: 0.7rem;
+}
+
+.link__assinatura {
+  margin-top: 1rem;
 }
 
 .link__assinatura a {

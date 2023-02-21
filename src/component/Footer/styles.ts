@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const List__menu = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   text-align: center;
   justify-content: center;
