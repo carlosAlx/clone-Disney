@@ -9,7 +9,7 @@ export function Card(prop: img) {
   return (
     <Container__card>
       {prop.imgsName.map((imgName, id) => (
-        <Card__img key={id} src={"./src/assets/img/" + imgName + ".jpg"} alt="" />
+        <Card__img key={id} src={"/src/assets/img/" + imgName + ".jpg"} alt="" />
       ))}
     </Container__card>
   );
