@@ -12,7 +12,7 @@ const ListImg = [
   "semlimites",
 ];
 
-const CardPageImgs: Array<CardPageImgsType> = [
+const CardPageImgs: CardPageImgsType[] = [
   {
     id: 0,
     name: "em breve",
@@ -43,8 +43,7 @@ export function AnyCard() {
 
   useEffect(() => {
     if (underlined === 0) {
-      CardPageImgs.map((item, id) => (
-        setUnderlined(id), setImg(item.imgs)));
+      CardPageImgs.map((item, id) => (setUnderlined(id), setImg(item.imgs)));
     }
   }, []);
 

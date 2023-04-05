@@ -15,6 +15,11 @@ const Section__blog = styled.div`
   display: flex;
   margin: auto;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
 `;
 
 const Container__img = styled.div`
